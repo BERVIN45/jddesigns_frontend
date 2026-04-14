@@ -1,0 +1,87 @@
+<section class="hero-split">
+  <div class="container hero-split-content">
+    <div class="hero-text-wrap reveal">
+      <span class="hero-label">Exquisite Interiors</span>
+      <h1>Architecting <span class="text-orange">Elegance</span> & Comfort</h1>
+      <p>Bespoke interior design solutions for those who value sophistication, functionality, and timeless style. Transforming your vision into a living masterpiece.</p>
+      <div class="hero-btns-v2">
+        <a routerLink="/contact" class="btn btn-primary">Start Design</a>
+        <a routerLink="/gallery" class="btn-text">View Gallery <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero-image-wrap reveal">
+      <div class="hero-image-frame">
+        <img src="images/hero.png" alt="Luxury Living Room">
+        <div class="accent-block"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-bar section-sm bg-black">
+  <div class="container">
+    <div class="trust-grid reveal">
+      <span>Featured in</span>
+      <div class="brand-row">
+        <i class="fab fa-apple"></i>
+        <i class="fab fa-microsoft"></i>
+        <i class="fab fa-google"></i>
+        <i class="fab fa-amazon"></i>
+        <i class="fab fa-airbnb"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-modern section bg-dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="title-lg">Curated <span class="text-orange">Services</span></h2>
+      <p>We offer a full spectrum of design solutions tailored to elite standards.</p>
+    </div>
+    
+    <div class="staggered-grid">
+      <div class="modern-card reveal" *ngFor="let s of services; let i = index" [class.offset]="i % 2 !== 0">
+        <div class="card-icon"><i [class]="s.icon"></i></div>
+        <h3>{{s.title}}</h3>
+        <p>{{s.desc}}</p>
+        <a class="card-link">Explore Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="signature-works section bg-black">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="title-lg">Signature <span class="text-orange">Works</span></h2>
+      <p>A glimpse into our most prestigious transformations across the globe.</p>
+    </div>
+    
+    <div class="project-showcase">
+      <div class="project-card reveal" *ngFor="let p of featuredProjects">
+        <div class="project-img-wrap">
+          <img [src]="p.img" [alt]="p.title">
+          <div class="project-info-overlay">
+            <span class="p-category">{{p.category}}</span>
+            <h4>{{p.title}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center" style="margin-top: 60px;">
+      <a routerLink="/gallery" class="btn btn-outline">Explore Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-v2 section bg-orange">
+  <div class="container cta-flex">
+    <div class="cta-text reveal">
+      <h2>Let's build your <span style="color: black">dream space</span> together.</h2>
+      <p>Contact our design studio today for a private consultation.</p>
+    </div>
+    <a routerLink="/contact" class="btn btn-black-fixed reveal">Book a Call</a>
+  </div>
+</section>

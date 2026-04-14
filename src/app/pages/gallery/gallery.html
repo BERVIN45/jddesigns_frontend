@@ -1,0 +1,30 @@
+<section class="page-header" [style.background-image]="'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/hero.png)'">
+  <div class="container text-center">
+    <h1 class="reveal">Our <span class="text-orange">Portfolio</span></h1>
+    <p class="reveal">A collection of our finest transformations.</p>
+  </div>
+</section>
+
+<section class="gallery section bg-black">
+  <div class="container">
+    <div class="filter-btns reveal">
+      <button (click)="filter('all')" [class.active]="currentFilter === 'all'">All</button>
+      <button (click)="filter('living')" [class.active]="currentFilter === 'living'">Living Room</button>
+      <button (click)="filter('kitchen')" [class.active]="currentFilter === 'kitchen'">Kitchen</button>
+      <button (click)="filter('office')" [class.active]="currentFilter === 'office'">Office</button>
+      <button (click)="filter('bedroom')" [class.active]="currentFilter === 'bedroom'">Bedroom</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" *ngFor="let p of filteredProjects" [class.show]="true">
+        <div class="gallery-img" [style.background-image]="'url(' + p.img + ')'">
+          <div class="gallery-overlay">
+            <h3>{{p.title}}</h3>
+            <p>{{p.category}}</p>
+            <a class="view-btn"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

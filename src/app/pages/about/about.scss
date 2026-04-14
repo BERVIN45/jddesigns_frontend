@@ -1,0 +1,109 @@
+.page-header {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  h1 { 
+    font-size: 4.5rem; 
+    font-weight: 800;
+    color: #FFFFFF;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  border-left: 2px solid var(--medium-gray);
+  padding-left: 25px;
+  
+  .step-num {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    opacity: 0.1;
+    line-height: 1;
+    margin-bottom: -15px;
+    font-family: var(--font-heading);
+  }
+
+  h3 { font-size: 1.25rem; margin-bottom: 15px; font-weight: 700; }
+  p { font-size: 0.9rem; opacity: 0.7; }
+
+  &::after {
+    display: none;
+  }
+}
+
+.founder-card {
+  max-width: 900px;
+  display: flex;
+  background: var(--dark-gray);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-align: left;
+  margin: 80px auto 0;
+  border: 1px solid var(--medium-gray);
+  transition: 0.4s;
+  box-shadow: var(--shadow-light);
+
+  &:hover {
+    border-color: var(--primary-orange);
+    box-shadow: var(--shadow-medium);
+  }
+}
+
+.founder-img {
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+.founder-info {
+  padding: 50px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 { font-size: 2.25rem; margin-bottom: 10px; font-weight: 800; }
+  p { margin-bottom: 25px; opacity: 0.7; line-height: 1.8; }
+}
+
+.social-links-small {
+  display: flex;
+  gap: 20px;
+
+  a {
+    font-size: 1.4rem;
+    opacity: 0.5;
+    color: var(--white);
+
+    &:hover { color: var(--primary-orange); opacity: 1; transform: translateY(-3px); }
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .founder-card { flex-direction: column; }
+  .founder-img { width: 100%; height: 350px; }
+  .founder-info { width: 100%; padding: 35px; }
+}

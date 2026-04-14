@@ -1,0 +1,20 @@
+<nav class="navbar" [class.scrolled]="isScrolled" [class.hero-theme]="isHeroPage && !isScrolled">
+  <div class="container-fluid navbar-content">
+    <a class="logo">
+      <span class="logo-jd">JD</span>
+      <span class="logo-designs">DESIGNS</span>
+    </a>
+    
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active" (click)="isMenuOpen = false">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen = false">About</a>
+      <a routerLink="/gallery" routerLinkActive="active" (click)="isMenuOpen = false">Gallery</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
+      <a routerLink="/contact" class="nav-cta" (click)="isMenuOpen = false">Get a Quote</a>
+    </div>
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <div class="bar" [class.open]="isMenuOpen"></div>
+    </div>
+  </div>
+</nav>
