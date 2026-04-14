@@ -1,8 +1,11 @@
 <nav class="navbar" [class.scrolled]="isScrolled" [class.hero-theme]="isHeroPage && !isScrolled">
   <div class="container-fluid navbar-content">
-    <a class="logo">
-      <span class="logo-jd">JD</span>
-      <span class="logo-designs">DESIGNS</span>
+    <a routerLink="/" class="logo">
+      <img src="images/logo.png" alt="JD Designs Logo" class="logo-img">
+      <span class="logo-text">
+        <span class="logo-jd">JD</span>
+        <span class="logo-designs">DESIGNS</span>
+      </span>
     </a>
     
     <div class="nav-links" [class.active]="isMenuOpen">

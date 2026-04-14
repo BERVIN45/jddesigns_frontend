@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --primary-orange: #FF6700;
+  --primary-orange: #F58220;
   --white: #111111;
   --black: #FFFFFF;
   --dark-gray: #F5F5F7;
@@ -54,20 +54,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 3px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
 
-  .logo-jd {
-    color: var(--primary-orange);
+  .logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
   }
-  .logo-designs {
-    color: var(--white);
-    font-weight: 300;
+
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    .logo-jd {
+      color: var(--primary-orange);
+    }
+    .logo-designs {
+      color: var(--white);
+      font-weight: 300;
+    }
   }
 }
 
