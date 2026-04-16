@@ -18,34 +18,64 @@
   </div>
 </section>
 
-<section class="trust-bar section-sm bg-black">
+<section class="partners-section reveal section-sm bg-black">
   <div class="container">
-    <div class="trust-grid reveal">
-      <span>Featured in</span>
-      <div class="brand-row">
-        <i class="fab fa-apple"></i>
-        <i class="fab fa-microsoft"></i>
-        <i class="fab fa-google"></i>
-        <i class="fab fa-amazon"></i>
-        <i class="fab fa-airbnb"></i>
+    <div class="partners-header">
+      <span class="partners-label">Trusted by Visionaries</span>
+    </div>
+    <div class="logo-marquee">
+      <div class="marquee-content">
+        <!-- First set of logos -->
+        <div class="logo-item" *ngFor="let logo of clientLogos">
+          <img [src]="logo" alt="Client Partner">
+        </div>
+        <!-- Duplicated set for seamless loop -->
+        <div class="logo-item" *ngFor="let logo of clientLogos">
+          <img [src]="logo" alt="Client Partner">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="services-modern section bg-dark">
+<section class="our-services section bg-dark">
   <div class="container">
-    <div class="section-header reveal">
-      <h2 class="title-lg">Curated <span class="text-orange">Services</span></h2>
-      <p>We offer a full spectrum of design solutions tailored to elite standards.</p>
+    <div class="section-header reveal text-center" style="margin-bottom: 60px; max-width: 100%;">
+      <h2 class="title-lg">Our <span class="text-orange">Services</span></h2>
     </div>
-    
-    <div class="staggered-grid">
-      <div class="modern-card reveal" *ngFor="let s of services; let i = index" [class.offset]="i % 2 !== 0">
-        <div class="card-icon"><i [class]="s.icon"></i></div>
-        <h3>{{s.title}}</h3>
-        <p>{{s.desc}}</p>
-        <a class="card-link">Explore Service</a>
+    <div class="services-row">
+      <div class="service-tile reveal" *ngFor="let s of services; let i = index">
+        <div class="tile-img-wrap">
+          <img [src]="s.img" [alt]="s.title">
+          <div class="tile-number">0{{i + 1}}</div>
+          <div class="tile-overlay">
+            <div class="tile-text">
+              <h3>{{s.title}}</h3>
+              <p>{{s.desc}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us section bg-black">
+  <div class="container">
+    <div class="why-us-grid-v2">
+      <div class="why-us-intro reveal">
+        <h2 class="title-lg">Why choose <span class="text-orange">JD Designs?</span></h2>
+        <p class="premium-text">We don't just design spaces; we architect lifestyle experiences tailored to elite standards of comfort and sophistication.</p>
+      </div>
+      
+      <div class="why-us-specialities">
+        <div class="spec-card reveal" *ngFor="let spec of specialities">
+          <div class="spec-icon"><i [class]="spec.icon"></i></div>
+          <div class="spec-info">
+            <h4>{{spec.title}}</h4>
+            <p>{{spec.desc}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -59,7 +89,7 @@
     </div>
     
     <div class="project-showcase">
-      <div class="project-card reveal" *ngFor="let p of featuredProjects">
+      <div class="project-card reveal" *ngFor="let p of featuredProjects; let i = index" [class]="'item-' + i">
         <div class="project-img-wrap">
           <img [src]="p.img" [alt]="p.title">
           <div class="project-info-overlay">
@@ -76,10 +106,10 @@
   </div>
 </section>
 
-<section class="cta-v2 section bg-orange">
+<section class="cta-v2 section cta-parallax">
   <div class="container cta-flex">
     <div class="cta-text reveal">
-      <h2>Let's build your <span style="color: black">dream space</span> together.</h2>
+      <h2>Let's build your <span class="text-orange">dream space</span> together.</h2>
       <p>Contact our design studio today for a private consultation.</p>
     </div>
     <a routerLink="/contact" class="btn btn-black-fixed reveal">Book a Call</a>
