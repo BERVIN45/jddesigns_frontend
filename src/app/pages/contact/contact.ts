@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Email } from '../../services/email';
 
 @Component({
   selector: 'app-contact',
@@ -10,16 +11,37 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact.scss'
 })
 export class ContactComponent implements AfterViewInit {
-  contactData = {
+
+  success = false;
+  error = false;
+
+  formData = {
     name: '',
     email: '',
     phone: '',
     message: ''
   };
 
+  constructor(private email:Email){}
+
   onSubmit() {
-    alert('Thank you for reaching out! We will contact you soon.');
-    this.contactData = { name: '', email: '', phone: '', message: '' };
+    this.success = false;
+    this.error = false;
+    
+     this.email.sendmail(this.formData)
+     .then((response:any)=>{
+      this.success = true;
+      this.formData = {
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      }
+     })
+     .catch((error:any)=>{
+      this.error = true;
+     })
+     
   }
 
   ngAfterViewInit() {

@@ -47,17 +47,24 @@
       <div class="contact-form-container reveal">
         <form class="contact-form" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <input type="text" name="name" [(ngModel)]="contactData.name" placeholder="Your Name" required>
+            <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" [(ngModel)]="contactData.email" placeholder="Your Email" required>
+            <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <input type="text" name="phone" [(ngModel)]="contactData.phone" placeholder="Phone Number">
+            <input type="text" name="phone" [(ngModel)]="formData.phone" placeholder="Phone Number">
           </div>
           <div class="form-group">
-            <textarea name="message" [(ngModel)]="contactData.message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" [(ngModel)]="formData.message" placeholder="Your Message" rows="5" required></textarea>
           </div>
+          <p *ngIf="success" class="success-msg">
+            Your message has been sent successfully!
+          </p>
+
+          <p *ngIf="error" class="error-msg">
+            Failed to send message. Please try again.
+          </p>
           <button type="submit" class="btn btn-primary w-full">Send Message</button>
         </form>
       </div>
