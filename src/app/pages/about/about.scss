@@ -31,7 +31,8 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 34px;
+  font-weight: 600;
   margin-bottom: 40px;
 }
 
@@ -235,7 +236,7 @@
 }
 
 @media (max-width: 768px) {
-  .section-title { font-size: 2.25rem; }
+  .section-title { font-size: 28px; }
   .mission-statement { padding: 20px; }
   .mission-statement p { font-size: 1.25rem; }
 }
