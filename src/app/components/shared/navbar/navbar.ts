@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       const url = event.urlAfterRedirects;
-      this.isHeroPage = url.includes('/about') || url.includes('/gallery') || url.includes('/contact');
+      this.isHeroPage = url === '/' || url.includes('/home') || url.includes('/about') || url.includes('/gallery') || url.includes('/contact');
     });
   }
 

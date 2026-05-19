@@ -14,7 +14,7 @@ export class HomeComponent implements AfterViewInit {
     { title: 'Residential Design', desc: 'Crafting luxury homes that tell your unique story.', img: 'images/residential.png' },
     { title: 'Commercial Spaces', desc: 'Functional, high-end environments for modern businesses.', img: 'images/commercial.png' },
     { title: 'Modular Kitchens', desc: 'State-of-the-art culinary spaces with German engineering.', img: 'images/kitchen.png' },
-    { title: 'Luxury Renovation', desc: 'Transforming existing spaces into contemporary masterpieces.', img: 'images/hero.png' }
+    { title: 'Luxury Renovation', desc: 'Transforming existing spaces into contemporary masterpieces.', img: 'images/hero1.png' }
   ];
 
   specialities = [
@@ -25,7 +25,7 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   featuredProjects = [
-    { title: 'The Obsidian Suite', category: 'Apartment', img: 'images/hero.png' },
+    { title: 'The Obsidian Suite', category: 'Apartment', img: 'images/hero1.png' },
     { title: 'Azure Riverside', category: 'Villa', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000' },
     { title: 'Amber Creative Studio', category: 'Commercial', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1000' },
     { title: 'Minimalist Haven', category: 'Living Room', img: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1000' },

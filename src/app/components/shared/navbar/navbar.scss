@@ -17,7 +17,7 @@
   }
 
   &.hero-theme {
-    .logo-designs { color: #FFFFFF !important; }
+    .logo-designs, .logo-jd { color: #FFFFFF !important; }
     .nav-links a { color: #FFFFFF !important; opacity: 0.9; }
     .nav-links a:hover { opacity: 1; }
     .bar, .bar::before, .bar::after { background: #FFFFFF !important; }
@@ -65,7 +65,7 @@
 }
 
 .nav-cta {
-  background: var(--primary-orange);
+  background: #58595b;
   padding: 10px 25px;
   border-radius: 2px;
   color: #FFFFFF !important;
@@ -74,7 +74,7 @@
   font-size: 0.75rem;
   letter-spacing: 1px;
   transition: 0.3s;
-  box-shadow: var(--shadow-orange);
+  box-shadow: 0 10px 25px rgba(88, 89, 91, 0.25);
 
   &:hover {
     background: var(--white);

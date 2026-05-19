@@ -208,18 +208,18 @@ h1, h2, h3, h4, h5, h6 {
 
   .logo-text {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: 3px;
     display: flex;
     align-items: center;
     gap: 8px;
     
     .logo-jd {
-      color: var(--primary-orange);
+      color: var(--white);
     }
     .logo-designs {
       color: var(--white);
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 }

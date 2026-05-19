@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class GalleryComponent implements AfterViewInit {
   currentFilter = 'all';
   projects = [
-    { title: 'The Obsidian Suite', category: 'living', img: 'images/hero.png' },
+    { title: 'The Obsidian Suite', category: 'living', img: 'images/hero1.png' },
     { title: 'Golden Horizon Kitchen', category: 'kitchen', img: 'images/kitchen.png' },
     { title: 'Creative Hub Office', category: 'office', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1000' },
     { title: 'Velvet Dreams Bedroom', category: 'bedroom', img: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1000' },
