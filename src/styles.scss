@@ -9,6 +9,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'MinionPro-Regular';
+  src: url('/fonts/minion-pro/MinionPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Manrope';
   src: url('/fonts/manrope/manrope-light.otf') format('opentype');
   font-weight: 300;
@@ -194,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
-  font-family: var(--font-heading);
+  font-family: "MinionPro-Regular";
   display: flex;
   align-items: center;
   gap: 12px;
