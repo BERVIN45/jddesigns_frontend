@@ -11,15 +11,24 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
   gap: 50px;
   padding-bottom: 50px;
+  align-items: start;
 }
 
 .footer-brand {
   p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
     opacity: 0.6;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  i {
+    margin-top: 3px; /* vertically align icon with first line of text */
+    flex-shrink: 0;  /* prevent icon from shrinking */
   }
 }
 
@@ -48,6 +57,7 @@
 
 .footer h3 {
   font-size: 1.2rem;
+  margin-top: 0;
   margin-bottom: 25px;
   position: relative;
   font-weight: 700;
@@ -99,13 +109,34 @@
 
 @media (max-width: 992px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
   }
 }
 
 @media (max-width: 576px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
+
   }
 }
+
+/* Footer map container */
+.footer-map {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h3 {
+    margin-bottom: 15px; /* tighter than global 25px */
+  }
+
+  iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 8px;
+  }
+}
+

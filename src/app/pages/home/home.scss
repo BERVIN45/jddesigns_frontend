@@ -407,7 +407,8 @@
 .btn-black-fixed {
   background: var(--primary-orange); /* Use orange button on dark background for pop */
   color: white;
-  padding: 20px 45px;
+  padding: 20px 35px;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: var(--radius-sm);
   border: none;
