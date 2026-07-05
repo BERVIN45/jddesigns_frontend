@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements AfterViewInit {
   services = [
-    { title: 'Residential Design', desc: 'Crafting luxury homes that tell your unique story.', img: 'images/residential.png' },
+    { title: 'Living Room', desc: 'Crafting luxury homes that tell your unique story.', img: 'images/residential.png' },
     { title: 'Commercial Spaces', desc: 'Functional, high-end environments for modern businesses.', img: 'images/commercial.png' },
     { title: 'Modular Kitchens', desc: 'State-of-the-art culinary spaces with German engineering.', img: 'images/kitchen.png' },
     { title: 'Luxury Renovation', desc: 'Transforming existing spaces into contemporary masterpieces.', img: 'images/hero1.png' }
