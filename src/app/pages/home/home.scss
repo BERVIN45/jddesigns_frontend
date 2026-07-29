@@ -177,63 +177,105 @@
   100% { transform: translateX(calc(-50% - 40px)); } /* -50% because we have two identical sets, -40px for half the gap */
 }
 
-/* Services Horizontal Row */
-.services-row {
+/* Services Grid */
+.services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
-/* Service Tiles (Reused/Refined) */
-.service-tile {
-  position: relative;
-  height: 450px; /* Taller for horizontal layout */
-  border-radius: var(--radius-md);
+/* Service Card */
+.service-card {
+  background: var(--bg-offset, #151515);
   overflow: hidden;
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--medium-gray);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  .tile-img-wrap {
-    height: 100%;
+  .service-img {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(to top, var(--bg-offset, #151515), transparent);
     }
   }
 
-  .tile-number {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
-    opacity: 0.15;
-    font-family: var(--font-heading);
-    z-index: 5;
-    transition: 0.5s;
-  }
+  .service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
 
-  .tile-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    color: white;
-    z-index: 10;
-    
-    h3 { font-size: 1.5rem; margin-bottom: 15px; color: white; }
-    p { font-size: 0.95rem; opacity: 0; transform: translateY(20px); transition: 0.5s; color: rgba(255, 255, 255, 0.8); }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: rgba(17, 17, 17, 0.65);
+      line-height: 1.6;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      color: var(--primary-orange);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: auto;
+
+      i {
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: var(--white);
+        
+        i {
+          transform: translateX(5px);
+        }
+      }
+    }
   }
 
   &:hover {
-    .tile-img-wrap img { transform: scale(1.1); }
-    .tile-number { opacity: 0.4; color: var(--primary-orange); }
-    .tile-overlay p { opacity: 1; transform: translateY(0); }
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+
+    .service-img img {
+      transform: scale(1.08);
+    }
   }
 }
 
@@ -429,7 +471,7 @@
   .hero-split-content { text-align: center; }
   .hero-text-wrap { p { max-width: 100%; } }
   
-  .services-row { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
   
   .why-us-grid-v2 { grid-template-columns: 1fr; text-align: center; gap: 60px; }
   .why-us-intro .why-us-img { margin: 20px auto 40px; max-width: 500px; }
@@ -450,7 +492,7 @@
 }
 
 @media (max-width: 576px) {
-  .services-row { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .project-showcase { grid-template-columns: 1fr; grid-auto-rows: 300px; }
   .project-card.item-0 { grid-column: span 1; }
   .hero-btns-v2 { flex-direction: column; }
