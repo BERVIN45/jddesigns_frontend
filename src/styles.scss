@@ -1,4 +1,18 @@
 /* ─── Self-hosted Fonts ─────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Lunavera';
+  src: url('/fonts/Lunavera/Lunavera_Personaluse.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/popins/poppins-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Manrope – Headings */
 @font-face {
@@ -157,8 +171,8 @@
   --bg-offset: #FAFAFA;
   
   /* Typography */
-  --font-heading: 'Manrope', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
   
   /* Shadows & Radius */
   --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -195,13 +209,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   color: var(--white);
 }
 
 .logo {
-  font-family: "MinionPro-Regular";
+  font-family: "Lunavera";
   display: flex;
   align-items: center;
   gap: 12px;

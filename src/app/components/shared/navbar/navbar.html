@@ -1,10 +1,10 @@
 <nav class="navbar" [class.scrolled]="isScrolled" [class.hero-theme]="isHeroPage && !isScrolled">
-  <div class="container-fluid navbar-content">
+  <div class="container navbar-content">
     <a routerLink="/" class="logo">
       <img src="images/logo.png" alt="JD Designs Logo" class="logo-img">
       <span class="logo-text">
         <span class="logo-jd">DJ</span>
-        <span class="logo-designs">DESIGNS</span>
+        <span class="logo-designs">Designs</span>
       </span>
     </a>
     
@@ -26,7 +26,7 @@
       </div>
       <a routerLink="/gallery" routerLinkActive="active" (click)="isMenuOpen = false">Gallery</a>
       <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
-      <a routerLink="/contact" class="nav-cta" (click)="isMenuOpen = false">Get a Quote</a>
+      <a routerLink="/contact" class="nav-cta" (click)="isMenuOpen = false"><span>Get a Quote</span></a>
     </div>
 
     <div class="menu-toggle" (click)="toggleMenu()">

@@ -25,6 +25,27 @@
     .nav-links > a, .nav-links .dropdown > a { color: #FFFFFF !important; opacity: 0.9; }
     .nav-links > a:hover, .nav-links .dropdown > a:hover { opacity: 1; }
     .bar, .bar::before, .bar::after { background: #FFFFFF !important; }
+
+    .nav-cta {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: none;
+      color: #FFFFFF !important;
+
+      &::before {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.22);
+        border-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        color: #FFFFFF !important;
+
+        &::before { opacity: 1; }
+      }
+    }
   }
 }
 
@@ -43,7 +64,7 @@
 
   a {
     font-weight: 500;
-    text-transform: uppercase;
+    font-family: var(--font-body);
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -142,21 +163,38 @@
 }
 
 .nav-cta {
-  background: #58595b;
-  padding: 10px 25px;
-  border-radius: 10px;
+  position: relative;
+  padding: 9px 24px;
+  border-radius: 100px;
   color: #FFFFFF !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(88, 89, 91, 0.25);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: none;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  transition: background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #1c1c1c;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+
+  &::before, &::after {
+    display: none !important;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+  }
 
   &:hover {
-    background: var(--white);
-    color: var(--black) !important;
+    background: #2e2e2e;
     transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+    color: #FFFFFF !important;
   }
 }
 

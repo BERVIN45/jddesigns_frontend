@@ -60,7 +60,6 @@
 
 .hero-label {
   display: block;
-  text-transform: uppercase;
   color: #fff;
   letter-spacing: 4px;
   font-size: 0.8rem;
@@ -70,7 +69,7 @@
 
 .hero-text-wrap {
   h1 {
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     margin-bottom: 30px;
     letter-spacing: -1px;
     color: #fff;
@@ -85,6 +84,7 @@
     opacity: 0.9;
     max-width: 100%;
     color: #fff;
+    font-family: var(--font-body);
   }
 }
 
@@ -94,9 +94,12 @@
   justify-content: center;
   gap: 30px;
 
+  .btn {
+    text-transform: none;
+  }
+
   .btn-text {
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
     display: flex;
@@ -123,7 +126,6 @@
 }
 
 .partners-label {
-  text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 3px;
   font-weight: 600;
@@ -363,7 +365,7 @@
 .project-card {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-md);
+  border-radius: 5px;
   box-shadow: var(--shadow-light);
   border: 1px solid var(--medium-gray);
   transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -401,7 +403,6 @@
 
     .p-category {
       color: var(--primary-orange);
-      text-transform: uppercase;
       font-size: 0.7rem;
       letter-spacing: 2px;
       display: block;
@@ -444,6 +445,7 @@
   font-size: 3.5rem; /* Slightly larger */
   line-height: 1.1;
   max-width: 650px;
+  margin-bottom: 10px;
 }
 
 .btn-black-fixed {
