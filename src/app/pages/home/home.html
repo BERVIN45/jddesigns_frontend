@@ -2,8 +2,9 @@
   <div class="container hero-split-content">
     <div class="hero-text-wrap reveal">
       <span class="hero-label">Exquisite Interiors</span>
-      <h1>Premium Interior Design & Execution</h1>
-      <p>Bespoke interior design solutions across Kanyakumari for those who value sophistication, functionality, and timeless style. We transform your vision into beautifully crafted living spaces.</p>
+      <h2>Premium Interior Design & Execution</h2>
+      <p>Bespoke interior design solutions across Kanyakumari for those who value sophistication, functionality, and
+        timeless style. We transform your vision into beautifully crafted living spaces.</p>
       <div class="hero-btns-v2">
         <a routerLink="/contact" class="btn btn-primary">Meet Your Designer</a>
         <a routerLink="/gallery" class="btn-text">View Gallery <i class="fas fa-arrow-right"></i></a>
@@ -26,6 +27,51 @@
         <!-- Duplicated set for seamless loop -->
         <div class="logo-item" *ngFor="let logo of clientLogos">
           <img [src]="logo" alt="Client Partner">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO About Section -->
+<section class="about-trust section bg-black" id="about-studio">
+  <div class="container">
+    <div class="about-trust-grid reveal">
+      <!-- Left Column: Image -->
+      <div class="about-trust-img-wrap">
+        <img src="images/residential.png" alt="Best Interior Designers in Nagercoil">
+      </div>
+
+      <!-- Right Column: Content -->
+      <div class="about-trust-content">
+        <h1 class="about-trust-h1">Best Interior Designers in Nagercoil</h1>
+        
+        <p class="about-trust-desc">
+          DJ Designs delivers premium residential and commercial interior design services in Nagercoil, serving homeowners and businesses across Kanyakumari.
+        </p>
+        <p class="about-trust-desc">
+          From modular kitchens and living rooms to bedrooms, offices, false ceilings, wardrobes, and complete interior execution — we create elegant spaces tailored to your lifestyle and vision.
+        </p>
+
+        <div class="about-trust-divider"></div>
+
+        <div class="about-trust-stats">
+          <div class="at-stat-item">
+            <span class="at-stat-num">50+</span>
+            <span class="at-stat-lbl">PROJECTS COMPLETED</span>
+          </div>
+          <div class="at-stat-item">
+            <span class="at-stat-num">5+</span>
+            <span class="at-stat-lbl">YEARS OF EXCELLENCE</span>
+          </div>
+          <div class="at-stat-item">
+            <span class="at-stat-num">100%</span>
+            <span class="at-stat-lbl">CLIENT SATISFACTION</span>
+          </div>
+        </div>
+
+        <div class="about-trust-btn-wrap">
+          <a routerLink="/about" class="btn-outline-dark">DISCOVER OUR STORY</a>
         </div>
       </div>
     </div>
@@ -61,7 +107,7 @@
           <img src="images/office.jpg" alt="Interior Design Showcase">
         </div>
       </div>
-      
+
       <div class="why-us-specialities">
         <div class="spec-card reveal" *ngFor="let spec of specialities">
           <div class="spec-icon"><i [class]="spec.icon"></i></div>
@@ -81,7 +127,7 @@
       <h2 class="title-lg">Signature Works</h2>
       <p>A glimpse into our most prestigious transformations across the globe.</p>
     </div>
-    
+
     <div class="project-showcase">
       <div class="project-card reveal" *ngFor="let p of featuredProjects; let i = index" [class]="'item-' + i">
         <div class="project-img-wrap">
@@ -93,7 +139,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="text-center" style="margin-top: 60px;">
       <a routerLink="/gallery" class="btn btn-outline">Explore Full Portfolio</a>
     </div>
