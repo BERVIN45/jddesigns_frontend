@@ -1,4 +1,26 @@
 <section class="hero-split">
+  <!-- Dynamic Zooming Background Slideshow -->
+  <div class="hero-slideshow">
+    <div 
+      *ngFor="let slide of heroSlides; let i = index" 
+      class="hero-slide" 
+      [class.active]="i === currentSlideIndex"
+    >
+      <img [src]="slide.img" [alt]="slide.alt" class="hero-slide-img" />
+    </div>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Background Slide Indicators -->
+  <div class="hero-slide-dots">
+    <span 
+      *ngFor="let slide of heroSlides; let i = index" 
+      class="dot" 
+      [class.active]="i === currentSlideIndex"
+      (click)="setSlide(i)"
+    ></span>
+  </div>
+
   <div class="container hero-split-content">
     <div class="hero-text-wrap reveal">
       <span class="hero-label">Exquisite Interiors</span>

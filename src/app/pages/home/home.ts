@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +9,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  heroSlides = [
+    { img: 'images/hero3.jpg', title: 'Exquisite Interiors', alt: 'Luxury Living Room Interior' },
+    { img: 'images/hero1.png', title: 'Modern Elegance', alt: 'Modern Interior Design Execution' },
+    { img: 'images/hero2.jpg', title: 'Architectural Perfection', alt: 'Premium Residential Interiors' }
+  ];
+  currentSlideIndex = 0;
+  private slideInterval: any;
+
   services = [
     { title: 'Living Room', desc: 'Crafting luxury homes that tell your unique story.', img: 'images/residential.png' },
     { title: 'Commercial Spaces', desc: 'Functional, high-end environments for modern businesses.', img: 'images/commercial.png' },
@@ -44,6 +52,30 @@ export class HomeComponent implements AfterViewInit {
     'images/client8.webp',
     'images/client9.webp'
   ];
+
+  ngOnInit() {
+    this.startSlideShow();
+  }
+
+  startSlideShow() {
+    this.slideInterval = setInterval(() => {
+      this.currentSlideIndex = (this.currentSlideIndex + 1) % this.heroSlides.length;
+    }, 6500);
+  }
+
+  setSlide(index: number) {
+    this.currentSlideIndex = index;
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+      this.startSlideShow();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver((entries) => {

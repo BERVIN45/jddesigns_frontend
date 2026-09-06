@@ -17,20 +17,23 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </a>
         <div class="dropdown-menu">
-          <a routerLink="/services/kitchen" (click)="isMenuOpen = false">Kitchen</a>
-          <a routerLink="/services/living-room" (click)="isMenuOpen = false">Living Room</a>
-          <a routerLink="/services/bedroom" (click)="isMenuOpen = false">Bedroom</a>
-          <a routerLink="/services/office" (click)="isMenuOpen = false">Office</a>
-          <a routerLink="/services/dining-room" (click)="isMenuOpen = false">Dining Room</a>
+<a routerLink="/services/kitchen" (click)="isMenuOpen = false">Modular Kitchen</a>
+<a routerLink="/services/living-room" (click)="isMenuOpen = false">Living Room Interiors</a>
+<a routerLink="/services/bedroom" (click)="isMenuOpen = false">Bedroom Interiors</a>
+<a routerLink="/services/office" (click)="isMenuOpen = false">Office Interiors</a>
+<a routerLink="/services/dining-room" (click)="isMenuOpen = false">Dining Room Interiors</a>
         </div>
       </div>
       <a routerLink="/gallery" routerLinkActive="active" (click)="isMenuOpen = false">Gallery</a>
       <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
-      <a routerLink="/contact" class="nav-cta" (click)="isMenuOpen = false"><span>Get a Quote</span></a>
+      <a routerLink="/contact" class="nav-cta mobile-only-cta" (click)="isMenuOpen = false"><span>Get a Quote</span></a>
     </div>
 
-    <div class="menu-toggle" (click)="toggleMenu()">
-      <div class="bar" [class.open]="isMenuOpen"></div>
+    <div class="nav-actions">
+      <a routerLink="/contact" class="nav-cta desktop-only-cta" (click)="isMenuOpen = false"><span>Get a Quote</span></a>
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <div class="bar" [class.open]="isMenuOpen"></div>
+      </div>
     </div>
   </div>
 </nav>

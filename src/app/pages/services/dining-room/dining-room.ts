@@ -1,0 +1,28 @@
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-dining-room',
+  standalone: true,
+  imports: [CommonModule, RouterLink],
+  templateUrl: './dining-room.html',
+  styleUrl: './dining-room.scss'
+})
+export class DiningRoomComponent implements OnInit, AfterViewInit {
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+}
