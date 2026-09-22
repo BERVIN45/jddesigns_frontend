@@ -11,12 +11,19 @@ import { CommonModule } from '@angular/common';
 export class GalleryComponent implements AfterViewInit {
   currentFilter = 'all';
   projects = [
-    { title: 'The Obsidian Suite', category: 'living', img: 'images/hero1.png' },
-    { title: 'Golden Horizon Kitchen', category: 'kitchen', img: 'images/kitchen.png' },
-    { title: 'Creative Hub Office', category: 'office', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1000' },
-    { title: 'Velvet Dreams Bedroom', category: 'bedroom', img: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1000' },
-    { title: 'Minimalist Sanctuary', category: 'living', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000' },
-    { title: 'Sleek Corporate Den', category: 'office', img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1000' }
+    { title: 'Modern Bedroom 1', category: 'bedroom', img: 'gallery/bedroom1.jpg' },
+    { title: 'Modern Bedroom 2', category: 'bedroom', img: 'gallery/bedroom2.jpg' },
+    { title: 'Modern Bedroom 3', category: 'bedroom', img: 'gallery/bedroom3.jpg' },
+    { title: 'Modern Bedroom 4', category: 'bedroom', img: 'gallery/bedroom4.jpg' },
+    { title: 'Kitchen Remodel 1', category: 'kitchen', img: 'gallery/kitchen1.jpg' },
+    { title: 'Kitchen Remodel 2', category: 'kitchen', img: 'gallery/kitchen2.jpg' },
+    { title: 'Kitchen Remodel 3', category: 'kitchen', img: 'gallery/kitchen3.jpg' },
+    { title: 'Luxury Living 1', category: 'living', img: 'gallery/living_room1.jpg' },
+    { title: 'Luxury Living 2', category: 'living', img: 'gallery/living_room2.jpg' },
+    { title: 'TV Unit 1', category: 'living', img: 'gallery/tv_unit1.jpg' },
+    { title: 'TV Unit 2', category: 'living', img: 'gallery/tv_unit2.jpg' },
+    { title: 'Executive Office 1', category: 'office', img: 'gallery/office1.jpg' },
+    { title: 'Executive Office 2', category: 'office', img: 'gallery/office2.jpg' }
   ];
 
   filteredProjects = [...this.projects];

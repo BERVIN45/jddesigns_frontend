@@ -1,0 +1,139 @@
+.bg-white {
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+.page-header {
+  padding: 180px 0 100px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  color: #FFFFFF;
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.services-listing {
+  padding: 100px 0;
+}
+
+.service-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 120px;
+  
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.service-image-wrapper {
+  flex: 1 1 50%;
+  max-width: 50%;
+  
+  .service-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Optional subtle shadow */
+  }
+}
+
+.service-content {
+  flex: 1 1 50%;
+  max-width: 50%;
+  position: relative;
+  
+  /* removed service number styles */
+  
+  .service-title {
+    font-family: var(--font-heading);
+    color: #1a202c;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .service-lead {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .service-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    
+    li {
+      position: relative;
+      padding: 15px 0 15px 20px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #718096;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      
+      &:first-child {
+        border-top: 1px solid #e2e8f0; /* Optional top border for the first item */
+      }
+      
+      .bullet-dot {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: var(--primary-orange);
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  .service-btn {
+    padding: 14px 40px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-transform: none; /* Make it "Enquire Now" not fully uppercase if preferred, though global button style is uppercase */
+  }
+}
+
+@media (max-width: 992px) {
+  .service-block, .service-block.reverse {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  
+  .service-image-wrapper, .service-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .service-content {
+    /* removed mobile service-number styles */
+    .service-title {
+      font-size: 1.8rem;
+    }
+  }
+}
