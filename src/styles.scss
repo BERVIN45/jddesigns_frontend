@@ -403,12 +403,47 @@ img {
   }
 }
 
+@keyframes pulseInstagram {
+  0% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(225, 48, 108, 0.6);
+  }
+  70% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 15px rgba(225, 48, 108, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(225, 48, 108, 0);
+  }
+}
+
+@keyframes pulseWhatsApp {
+  0% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 .instagram-float {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  animation: pulseInstagram 2.5s infinite;
+  
+  &:hover {
+    animation: none;
+  }
 }
 
 .whatsapp-float {
   background-color: #25d366;
+  animation: pulseWhatsApp 2.5s infinite;
+  animation-delay: 1.25s;
+  
+  &:hover {
+    animation: none;
+  }
 }
 
 .scroll-to-top {
