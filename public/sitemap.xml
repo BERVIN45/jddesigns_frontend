@@ -3,28 +3,35 @@
 
   <url>
     <loc>https://djdesigns.in/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://djdesigns.in/about</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://djdesigns.in/services</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://djdesigns.in/gallery</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://djdesigns.in/contact</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
