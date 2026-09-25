@@ -749,8 +749,12 @@
   .services-grid { grid-template-columns: 1fr; }
   .project-showcase { grid-template-columns: 1fr; grid-auto-rows: 300px; }
   .project-card.item-0 { grid-column: span 1; }
-  .hero-btns-v2 { flex-direction: column; }
+  .hero-btns-v2 { flex-direction: column; width: 100%; gap: 15px; }
+  .hero-btns-v2 .btn { width: 100%; display: flex; justify-content: center; }
   .title-lg { font-size: 2.2rem; }
+  .hero-text-wrap h2 { font-size: 2.8rem; }
+  .hero-text-wrap p { font-size: 1rem; }
+  .at-stat-num { font-size: 2.3rem; }
 }
 /* Testimonials Section */
 .testimonials-section {
@@ -779,7 +783,7 @@
 
 .review-card {
   flex: 0 0 calc(33.333% - 20px);
-  min-width: 320px;
+  min-width: 280px;
   scroll-snap-align: start;
   background: var(--bg-offset, #1c1c1c);
   padding: 40px;

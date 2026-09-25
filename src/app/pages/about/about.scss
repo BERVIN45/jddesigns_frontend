@@ -238,3 +238,12 @@
   .mission-statement { padding: 20px; }
   .mission-statement p { font-size: 1.25rem; }
 }
+@media (max-width: 576px) {
+  .page-header h1 { font-size: 2.2rem; }
+  .page-header p { font-size: 0.9rem; }
+  .section-title { font-size: 1.6rem; }
+  .story-content .heritage-watermark { font-size: 6rem; top: -30px; left: 50%; transform: translateX(-50%); }
+  .story-content .lead-text { font-size: 1.1rem; }
+  .mission-statement p { font-size: 1.1rem; }
+  .founder-info h3 { font-size: 1.8rem; }
+}
