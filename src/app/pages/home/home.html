@@ -104,6 +104,7 @@
   <div class="container">
     <div class="section-header reveal text-center" style="margin-bottom: 60px; max-width: 100%;">
       <h2 class="title-lg">Our Services</h2>
+      <p>From concept to completion — tailored interior solutions for every space and lifestyle.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal" *ngFor="let s of services">
@@ -178,5 +179,36 @@
       <p>Contact our design studio today for a private consultation.</p>
     </div>
     <a routerLink="/contact" class="btn btn-black-fixed reveal">Book a Call</a>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section section bg-black">
+  <div class="container">
+    <div class="section-header reveal text-center" style="margin-bottom: 50px;">
+      <h2 class="title-lg">Testimonials</h2>
+      <p>What our clients say about their experience with DJ Designs.</p>
+    </div>
+
+    <div class="testimonials-wrapper reveal">
+      <div class="testimonials-scroll">
+        <div class="t-card" *ngFor="let t of testimonials">
+          <div class="t-header">
+            <div class="t-avatar">{{t.name.charAt(0)}}</div>
+            <div class="t-user-info">
+              <h4>{{t.name}}</h4>
+            </div>
+          </div>
+          <div class="t-rating">
+            <div class="t-stars">
+              <i class="fas fa-star" *ngFor="let _ of [1,2,3,4,5]"></i>
+            </div>
+          </div>
+          <div class="t-body">
+            <p>"{{t.content}}"</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

@@ -1,7 +1,7 @@
 <section class="page-header" [style.background-image]="'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/hero3.jpg)'">
   <div class="container text-center">
     <h1 class="reveal">Our Portfolio</h1>
-    <p class="reveal">A collection of our finest transformations.</p>
+    <p class="reveal">A collection of our finest transformations</p>
   </div>
 </section>
 
@@ -13,6 +13,8 @@
       <button (click)="filter('kitchen')" [class.active]="currentFilter === 'kitchen'">Kitchen</button>
       <button (click)="filter('office')" [class.active]="currentFilter === 'office'">Office</button>
       <button (click)="filter('bedroom')" [class.active]="currentFilter === 'bedroom'">Bedroom</button>
+      <button (click)="filter('healthcare')" [class.active]="currentFilter === 'healthcare'">Healthcare</button>
+      <button (click)="filter('church')" [class.active]="currentFilter === 'church'">Church</button>
     </div>
 
     <div class="gallery-grid">

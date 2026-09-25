@@ -53,6 +53,37 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     'images/client9.webp'
   ];
 
+  testimonials = [
+    {
+      name: 'Sreeja Rajasuthan',
+      meta: '5 reviews • 1 photo',
+      date: 'Yesterday New',
+      stars: 5,
+      content: 'Really happy with the DJ design and overall experience. Very professional, responsive, and easy to work with. They understood our requirements and came up with a beautiful and practical design. Highly recommended!'
+    },
+    {
+      name: 'Jesus ATS',
+      meta: '2 reviews • 0 photos',
+      date: '6 days ago New',
+      stars: 5,
+      content: 'Very Telent person work very nice Hard worker and truly person'
+    },
+    {
+      name: 'Arun The Bull',
+      meta: '0 reviews • 1 photo',
+      date: '6 days ago New',
+      stars: 5,
+      content: 'Best output under budget🍻💥'
+    },
+    {
+      name: 'Bervin',
+      meta: '4 reviews • 0 photos',
+      date: '15 weeks ago',
+      stars: 5,
+      content: 'Had an amazing experience with DJ Designs. Their team transformed our space beautifully while paying attention to every... View full review'
+    }
+  ];
+
   ngOnInit() {
     this.startSlideShow();
   }

@@ -23,7 +23,12 @@ export class GalleryComponent implements AfterViewInit {
     { title: 'TV Unit 1', category: 'living', img: 'gallery/tv_unit1.jpg' },
     { title: 'TV Unit 2', category: 'living', img: 'gallery/tv_unit2.jpg' },
     { title: 'Executive Office 1', category: 'office', img: 'gallery/office1.jpg' },
-    { title: 'Executive Office 2', category: 'office', img: 'gallery/office2.jpg' }
+    { title: 'Executive Office 2', category: 'office', img: 'gallery/office2.jpg' },
+    { title: 'Healthcare Space 1', category: 'healthcare', img: 'gallery/healthcare1.jpeg' },
+    { title: 'Healthcare Space 2', category: 'healthcare', img: 'gallery/healthcare2.jpeg' },
+    { title: 'Healthcare Space 3', category: 'healthcare', img: 'gallery/healthcare3.jpeg' },
+    { title: 'Church Interior 1', category: 'church', img: 'gallery/church1.jpg' },
+    { title: 'Church Interior 2', category: 'church', img: 'gallery/church2.jpg' }
   ];
 
   filteredProjects = [...this.projects];
