@@ -55,6 +55,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   testimonials = [
     {
+      name: 'Arun S V',
+      meta: '1 review',
+      date: '6 days ago New',
+      stars: 5,
+      content: 'great working with Dj designs plan has been awesome'
+    },
+    {
       name: 'Sreeja Rajasuthan',
       meta: '5 reviews • 1 photo',
       date: 'Yesterday New',
@@ -77,10 +84,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     },
     {
       name: 'Bervin',
-      meta: '4 reviews • 0 photos',
+      meta: '4 reviews',
       date: '15 weeks ago',
       stars: 5,
-      content: 'Had an amazing experience with DJ Designs. Their team transformed our space beautifully while paying attention to every... View full review'
+      content: 'Had an amazing experience with DJ Designs. Their team transformed our space beautifully while paying attention to every detail. The design was elegant, functional, and perfectly matched our expectations. The entire process was smooth, and the project was completed on time. Highly recommended!'
     }
   ];
 

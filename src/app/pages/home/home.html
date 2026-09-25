@@ -192,20 +192,40 @@
 
     <div class="testimonials-wrapper reveal">
       <div class="testimonials-scroll">
-        <div class="t-card" *ngFor="let t of testimonials">
-          <div class="t-header">
-            <div class="t-avatar">{{t.name.charAt(0)}}</div>
-            <div class="t-user-info">
-              <h4>{{t.name}}</h4>
+        <div class="testimonials-track">
+          <!-- First Set -->
+          <div class="t-card" *ngFor="let t of testimonials">
+            <div class="t-header">
+              <div class="t-avatar">{{t.name.charAt(0)}}</div>
+              <div class="t-user-info">
+                <h4>{{t.name}}</h4>
+              </div>
+            </div>
+            <div class="t-rating">
+              <div class="t-stars">
+                <i class="fas fa-star" *ngFor="let _ of [1,2,3,4,5]"></i>
+              </div>
+            </div>
+            <div class="t-body">
+              <p>"{{t.content}}"</p>
             </div>
           </div>
-          <div class="t-rating">
-            <div class="t-stars">
-              <i class="fas fa-star" *ngFor="let _ of [1,2,3,4,5]"></i>
+          <!-- Second Set for infinite loop -->
+          <div class="t-card" *ngFor="let t of testimonials">
+            <div class="t-header">
+              <div class="t-avatar">{{t.name.charAt(0)}}</div>
+              <div class="t-user-info">
+                <h4>{{t.name}}</h4>
+              </div>
             </div>
-          </div>
-          <div class="t-body">
-            <p>"{{t.content}}"</p>
+            <div class="t-rating">
+              <div class="t-stars">
+                <i class="fas fa-star" *ngFor="let _ of [1,2,3,4,5]"></i>
+              </div>
+            </div>
+            <div class="t-body">
+              <p>"{{t.content}}"</p>
+            </div>
           </div>
         </div>
       </div>
